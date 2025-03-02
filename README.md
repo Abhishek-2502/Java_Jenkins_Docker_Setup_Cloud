@@ -132,7 +132,7 @@ docker login
 ### 9. Install Docker Compose
 
 ```bash
-sudo apt-get install docker-compose
+sudo apt-get install docker-compose -y
 ```
 
 ### 10. Configure AWS Security Group
