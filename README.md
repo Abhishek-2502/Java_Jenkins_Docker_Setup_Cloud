@@ -86,7 +86,7 @@ If the service is running, it should show the status as `active (running)`.
 Ensure that you can access Jenkins by modifying the inbound rules of your EC2 instance's security group.
 
 - Add a custom TCP rule for port `8080`.
-- Set the source to `MyIP` to allow access from your local machine.
+- Set the source to `Anywhere-IPv4` to allow access from anywhere.
 
 ### 8. Access Jenkins Web Interface
 
