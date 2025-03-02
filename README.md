@@ -1,6 +1,6 @@
-# Jenkins Setup on AWS EC2
+# Jenkins and Docker Setup on AWS EC2
 
-This guide outlines the steps to install and configure Jenkins on an AWS EC2 instance running Ubuntu. 
+This guide outlines the steps to install and configure Jenkins and Docker on an AWS EC2 instance running Ubuntu. 
 
 ## Prerequisites
 
@@ -81,14 +81,52 @@ sudo systemctl status jenkins
 
 If the service is running, it should show the status as `active (running)`.
 
-### 7. Configure AWS Security Group
+### 7. Install Docker
+
+Installing Docker
+
+```bash
+sudo apt install docker.io -y
+```
+
+Checking Docker Version
+
+```bash
+docker version
+```
+
+Giving Permission
+
+```bash
+sudo usermod -a -G docker $USER
+```
+
+Giving Permission
+
+```bash
+sudo usermod -a -G docker jenkins
+```
+
+Restarting Jenkins
+
+```bash
+sudo systemctl restart jenkins
+```
+
+Rebooting Instance
+
+```bash
+sudo reboot
+```
+
+### 8. Configure AWS Security Group
 
 Ensure that you can access Jenkins by modifying the inbound rules of your EC2 instance's security group.
 
 - Add a custom TCP rule for port `8080`.
 - Set the source to `Anywhere-IPv4` to allow access from anywhere.
 
-### 8. Access Jenkins Web Interface
+### 9. Access Jenkins Web Interface
 
 Open your browser and navigate to the following URL, replacing `<PublicIPv4>` with your EC2 instance's public IPv4 address:
 
@@ -96,7 +134,7 @@ Open your browser and navigate to the following URL, replacing `<PublicIPv4>` wi
 http://<PublicIPv4>:8080
 ```
 
-### 9. Retrieve Jenkins Admin Password
+### 10. Retrieve Jenkins Admin Password
 
 The first time you access Jenkins, it will ask for an initial admin password. Retrieve the password by running this command on your EC2 instance:
 
@@ -106,19 +144,19 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
 Copy the password and paste it into the login form on the Jenkins web page.
 
-### 10. Set Up Admin Username and Password
+### 11. Set Up Admin Username and Password
 
 After the plugin installation is complete, you’ll be asked to create an admin user.
 
 - **Username**: Abhishek-2502
 - Choose your preferred password.
 
-### 11. Install Suggested Plugins
+### 12. Install Suggested Plugins
 
 Once logged in, Jenkins will prompt you to install the suggested plugins. Click on "Install suggested plugins" to continue.
 
 
-### 12. Jenkins is Ready
+### 13. Jenkins is Ready
 
 Once the setup is complete, Jenkins will be ready to use!
 
