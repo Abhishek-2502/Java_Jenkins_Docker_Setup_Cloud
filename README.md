@@ -98,13 +98,13 @@ docker version
 Giving Permission
 
 ```bash
-sudo usermod -a -G docker $USER
+sudo usermod -aG docker $USER && newgrp docker
 ```
 
 Giving Permission
 
 ```bash
-sudo usermod -a -G docker jenkins
+sudo usermod -aG docker jenkins
 ```
 
 Restarting Jenkins
