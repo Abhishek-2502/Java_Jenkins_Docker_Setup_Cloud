@@ -1,4 +1,4 @@
-# Java, Jenkins, Docker, Docker Compose anb Docker Hub Setup on AWS EC2
+# Java, Jenkins, Docker, Docker Compose and Docker Hub Setup on AWS EC2
 
 This guide outlines the steps to install and configure Java, Jenkins, Docker, Docker Compose and Docker Hub on an AWS EC2 instance running Ubuntu. 
 
