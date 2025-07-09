@@ -1,4 +1,4 @@
-# Java, Jenkins, Docker, Docker Compose and Docker Hub Setup on Ubuntu
+# Java, Jenkins, Docker, Docker Compose and Docker Hub Setup on Instance with Ubuntu
 
 This guide outlines the steps to install and configure Java, Jenkins, Docker, Docker Compose and Docker Hub on Ubuntu. 
 
@@ -135,7 +135,7 @@ docker login
 sudo apt-get install docker-compose -y
 ```
 
-### 10. Configure AWS Security Group
+### 10. Configure AWS Security Group, GCP Firewall, etc
 
 Ensure that you can access Jenkins by modifying the inbound rules of your instance's security group.
 
