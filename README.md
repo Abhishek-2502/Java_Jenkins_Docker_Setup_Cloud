@@ -1,10 +1,10 @@
-# Java, Jenkins, Docker, Docker Compose and Docker Hub Setup on AWS EC2
+# Java, Jenkins, Docker, Docker Compose and Docker Hub Setup on Ubuntu
 
-This guide outlines the steps to install and configure Java, Jenkins, Docker, Docker Compose and Docker Hub on an AWS EC2 instance running Ubuntu. 
+This guide outlines the steps to install and configure Java, Jenkins, Docker, Docker Compose and Docker Hub on Ubuntu. 
 
 ## Prerequisites
 
-- An AWS EC2 instance with Ubuntu.
+- An instance with Ubuntu.
 - A user with `sudo` privileges.
 
 ## Steps
@@ -137,14 +137,14 @@ sudo apt-get install docker-compose -y
 
 ### 10. Configure AWS Security Group
 
-Ensure that you can access Jenkins by modifying the inbound rules of your EC2 instance's security group.
+Ensure that you can access Jenkins by modifying the inbound rules of your instance's security group.
 
 - Add a custom TCP rule for port `8080`.
 - Set the source to `Anywhere-IPv4` to allow access from anywhere.
 
 ### 11. Access Jenkins Web Interface
 
-Open your browser and navigate to the following URL, replacing `<PublicIPv4>` with your EC2 instance's public IPv4 address:
+Open your browser and navigate to the following URL, replacing `<PublicIPv4>` with your instance's public IPv4 address:
 
 ```
 http://<PublicIPv4>:8080
@@ -152,7 +152,7 @@ http://<PublicIPv4>:8080
 
 ### 12. Retrieve Jenkins Admin Password
 
-The first time you access Jenkins, it will ask for an initial admin password. Retrieve the password by running this command on your EC2 instance:
+The first time you access Jenkins, it will ask for an initial admin password. Retrieve the password by running this command on your instance:
 
 ```bash
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
@@ -180,5 +180,5 @@ Once the setup is complete, Jenkins will be ready to use!
 
 ## Note:
 
-- Always ensure your AWS EC2 instance is properly secured with the necessary firewall rules and access controls.
-- The EC2 instance should be monitored for security and performance, especially when hosting Jenkins for production workloads.
+- Always ensure your instance is properly secured with the necessary firewall rules and access controls.
+- The instance should be monitored for security and performance, especially when hosting Jenkins for production workloads.
