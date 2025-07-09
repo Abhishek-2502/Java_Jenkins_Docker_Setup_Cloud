@@ -1,4 +1,4 @@
-# Java, Jenkins, Docker, Docker Compose and Docker Hub Setup on Instance with Ubuntu
+# Java, Jenkins, Docker, Docker Compose and Docker Hub Setup on an Instance with Ubuntu
 
 This guide outlines the steps to install and configure Java, Jenkins, Docker, Docker Compose and Docker Hub on Ubuntu. 
 
