@@ -192,6 +192,20 @@ docker exec jenkins-docker cat /var/jenkins_home/secrets/initialAdminPassword
 ```
 ---
 
+### Other:
+
+Uninstall Doker:
+```bash
+sudo apt remove -y docker docker-engine docker.io containerd runc
+```
+
+Remove docker data (containers, images, volumes, configs)
+```bash
+sudo rm -rf /var/lib/docker
+sudo rm -rf /var/lib/containerd
+```
+---
+
 ## Note:
 
 - Always ensure your instance is properly secured with the necessary firewall rules and access controls.
