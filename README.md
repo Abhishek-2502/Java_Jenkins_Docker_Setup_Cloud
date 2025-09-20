@@ -197,6 +197,8 @@ docker exec jenkins-docker cat /var/jenkins_home/secrets/initialAdminPassword
 Uninstall Doker:
 ```bash
 sudo apt remove -y docker docker-engine docker.io containerd runc
+sudo apt autoremove -y
+hash -r
 ```
 
 Remove docker data (containers, images, volumes, configs)
