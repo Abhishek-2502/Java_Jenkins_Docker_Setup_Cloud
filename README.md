@@ -132,7 +132,7 @@ sudo apt install docker.io -y
 Enable Docker at Startup
 
 ```bash
-sudo system enable --now docker
+sudo systemctl enable --now docker
 ```
 
 Checking Docker Version
