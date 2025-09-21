@@ -129,6 +129,12 @@ Installing Docker
 sudo apt install docker.io -y
 ```
 
+Enable Docker at Startup
+
+```bash
+sudo system enable --now docker
+```
+
 Checking Docker Version
 
 ```bash
